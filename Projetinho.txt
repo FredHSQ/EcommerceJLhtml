@@ -1,0 +1,61 @@
+
+Paginas:
+    Index
+    Produtos
+    Carrinho
+    Forum
+
+Index: 
+    Navegação
+    Imagem principal do site
+
+    Produtos em destaque
+
+    Textinho descritivo
+
+    Rodapé:
+        Contatinho <das mina e dos mino>
+        redes sociais
+
+
+Forum:
+    Navegação
+    Imagem do Forum
+
+    Input de publicação
+
+    Input de topico:
+        Levando para paginas do topico
+    
+    Rodapé:
+        Contatinho <das mina e dos mino>
+        redes sociais
+
+Produtos:
+    Navegação
+    Imagem principal do site
+
+    Input de filtro de tipo de produto: 
+        lista de tipos de produto:
+
+    Alguns produtos aleatorios exemplos
+        Botão de enviar pro carrinho
+
+    Rodapé:
+        Contatinho <das mina e dos mino>
+        redes sociais  
+
+
+Carrinho:
+    Navegação
+
+    Produtos selecionados
+        produtos aleatorios exemplos
+        checkbox de confirmação de compra
+
+    Botão finalizar compra
+
+    Rodapé:
+        Contatinho <das mina e dos mino>
+        redes sociais      
+    
