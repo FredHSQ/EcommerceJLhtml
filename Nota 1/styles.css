@@ -1,0 +1,22 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+footer{
+    background-color: rgba(255, 68, 0, 0.904);
+    border-top: solid 2px rgba(0, 0, 0, 0.404);
+    width: 100%vw;
+}
+img{
+    width:50%;
+}
+#footer{
+    display: flex;
+}
+
+#contatos{
+    position: relative;
+    margin-left: 10%;
+    justify-content: right;
+}
