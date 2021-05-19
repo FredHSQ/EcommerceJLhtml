@@ -34,7 +34,7 @@
             </li>
 
             <li>
-                <a href="#">Forum</a>
+                <a href="#">Contato</a>
             </li>
             <li>
                 <a href="./carrinho.html">Carrinho</a>
@@ -42,58 +42,27 @@
         </ul>
     </nav>
     <main>
-        <img src="./Imagens/personagens.jpg" alt="Imagem: Personagens iconicos de jogos eletrônicos">
-        <p hidden>forum de discussão, video games, jogos eletrônicos, duvida, conversa, amigos, nintendo, playstation,
-            xbox</p>
-        <h1>Forum dos Justiceiros</h1>
-        <article>
-            <section>
-                <h3>
-                    Sou ruim no LOL
-                </h3>
-                <p>
-                    Preciso de ajuda para sair do ferro 4, vou cair para madeira. Por favor me ajudem
-                </p>
-            </section>
-            <section>
-                <h3>
-                    Vocês acharam Zelda caro?
-                </h3>
-                <p>
-                    Essa promoção que só vale pro professor é vacilo
-                </p>
-            </section>
-            <section>
-                <h3>
-                    Qual console é melhor?
-                </h3>
-                <p>
-                    To pensando em comprar um ps ou um switch, meu amigo indicou xbox, mas acho que prefiro uma
-                    torradeira do que um xbox
-                </p>
-            </section>
-        </article>
-        <section>
-            <p>O que quer falar sobre?</p>
-            <input type="text" placeholder="Tópico sobre jogos">
-        </section>
-        <section>
-            <h3>Quer mandar sugestões para nós?</h3>
-            <div>
-                Nome<br>
-                <input type="text" name="nome" aria-label="Digite seu nome aqui">
-            </div>
-            <div>
-                Sugestões<br>
-                <form method="post" action="http://">
-                    <textarea name="comments" cols="30" rows="5" class="html-text-box"
-                        aria-label="Digite seu comentário aqui" placeholder="Comente aqui..."></textarea>
-                    <br>
+        <section id="batSignal">
+            <h2>Ligue o bat sinal</h2>
+            <form id="formJL" method="post" action="http://">
+                <label for="nameForm">Nome</label>
+                <input type="text" id="nameForm" name="nameForm" placeholder="Seu nome..">
+                <br>
+                <label for="emailForm">E-mail</label>
+                <input type="text" id="emailForm" name="emailForm" placeholder="Seu email..">
+                <br>
+                <label for="phoneForm">Telefone</label>
+                <input type="text" id="phoneForm" name="phoneForm" placeholder="(99) 99999-9999">
+                <br>
+                <label for="message">Mensagem</label>
+                <textarea name="message" cols="30" rows="5" class="html-text-box"
+                aria-label="Digite sua mensagem aqui" placeholder="Sua mensagem aqui..."></textarea>
+                <br>
+                <div id="button-form">
                     <input type="button" value="Enviar" class="html-text-box">
-
-                    <input type="reset" value="Resetar" class="html-text-box">
-                </form>
-            </div>
+                    <input type="reset" value="Resetar" class="html-text-box">  
+                </div>
+            </form>
         </section>
     </main>
     <footer>
