@@ -6,66 +6,115 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrinho Justice League Jogos Eletrônicos</title>
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
     <header>
-        <nav>
-            <ul>
-                <li>
-                    <a href="./index.html">Inicio</a>
-                </li>
-                <li>
-                    <a href="./produtos.html">Produtos</a>
-                </li>
+        <img src="./Imagens/funko1.png" alt="funko" id="img-funko">
+        <div id="leaguecom">
+            <img src="./Imagens/liga.svg" alt="Justice league" id="img-jl">
+            <div id="div-procura">
+                <input type="text" name="search" id="procurador" placeholder="Encontre aqui o que procuras..."
+                    aria-label="Ensira aqui a pesquisa que gostaria de fazer no site.">
+                <img src="./Imagens/lupa.png" alt="lupa" id="img-lupa">
+            </div>
 
-                <li>
-                    <a href="./forum.html">Forum</a>
-                </li>
-                <li>
-                    <a href="#">Carrinho</a>
-                </li>
-            </ul>
-        </nav>
+            <img src="./Imagens/ecommerce.png" alt="ecommerce" id="img-ecom">
+        </div>
     </header>
+    <nav id="nav-header">
+        <!-- <img src="./Imagens/home.png" alt="icone home"> -->
+        <ul>
+            <li>
+                <a href="./index.html">Inicio</a>
+            </li>
+            <li>
+                <a href="./produtos.html">Produtos</a>
+            </li>
+
+            <li>
+                <a href="./forum.html">Forum</a>
+            </li>
+            <li>
+                <a href="#">Carrinho</a>
+            </li>
+        </ul>
+    </nav>
     <main>
-        <article>
-            <h1>
-                Seu carrinho
-            </h1>
-            <section>
+        <article id="carrinho">
+            <div id="cart-title">
+                <h2>
+                    Seu carrinho
+                </h2>
+                <h2>
+                    Preço
+                </h2>
+            </div>
+            <hr>
+            <section class="cart-products">
+                <input type="checkbox" checked>
                 <img src="./Imagens/switch.jpg" alt="Produto: Console Nintendo Switch">
-                <p>
+                <div>
+                    <p class="cart-product-title">
+                        <strong>Nintendo Switch</strong>
+                    </p>
+                    <p class="cart-description">
+                        <strong>Video game barato para o professor Yuri</strong>
+                    </p>
+                </div>
+                <p class="cart-product-price">
                     <strong>R$10,00</strong>
                 </p>
-                <input type="checkbox" checked>
             </section>
-            <section>
+            <hr>
+            <section class="cart-products">
+                <input type="checkbox" checked>
                 <img src="./Imagens/ssbU.jpg" alt="Jogo: Super Smash Bros Ultimate">
-                <p>
+                <div>
+                    <p class="cart-product-title">
+                        <strong>Nintendo Switch</strong>
+                    </p>
+                    <p class="cart-description">
+                        <strong>Video game barato para o professor Yuri</strong>
+                    </p>
+                </div>
+                <p class="cart-product-price">
                     <strong>R$1,00</strong>
                 </p>
-                <input type="checkbox" checked>
             </section>
-            <input type="button" value="Finalizar compra">
+            <hr>
+            <div id="cart-finalize-box">
+                <p>
+                    O valor total é:
+                </p>
+                <p>
+                    R$2388,00
+                </p>
+                <input id="cart-finalize" type="button" value="Finalizar compra">
+            </div>
         </article>
     </main>
     <footer>
-        <article id="footer">
-            <section>
+        <div id="container-general-footer">
+            <section id="container-about">
                 <h3>Sobre a loja</h3>
                 <p>
                     Melhor loja de todas para comprar coisas relacionadas a jogos. Bem vindos a
                 </p>
                 <blockquote> Justice League Jogos Eletrônicos</blockquote>
             </section>
-            <section id="contatos">
+            <div id="logo-footer">
+                <img src="./Imagens/logo-footer.png" alt="logo-footer">
+            </div>
+            <section id="container-contact">
                 <h3>Contatos</h3>
-                <a href="tel:+552499999999">Telefone: +552499999999</a>
-                <br>
-                <a href="mailto:justice@league.com">Email de Contato: justice@league.com</a>
-                <br>
+                <address>
+                    <a href="tel:+552499999999">Telefone: +552499999999</a>
+                    <br>
+                    <a href="mailto:justice@league.com">Email de Contato: justice@league.com</a>
+                    <br>
+                </address>
                 <a href="facebook.com/JusticeLeague">Facebook</a>
                 <br>
                 <a href="instagram.com/JusticeLeague">Instagram</a>
@@ -73,7 +122,10 @@
                 <a href="twitter.com/JusticeLeague">Twitter</a>
                 <br>
             </section>
-        </article>
+        </div>
+        <address id="copyright">
+            <p>Danilo, Fred, João Paulo, José Vitor, Lilica, Lucas, Rodrigo @Copyright</p>
+        </address>
     </footer>
 </body>
 

@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Justice League Jogos Eletrônicos</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
@@ -15,10 +15,11 @@
         <div id="leaguecom">
             <img src="./Imagens/liga.svg" alt="Justice league" id="img-jl">
             <div id="div-procura">
-                <input type="text" name="search" id="procurador" placeholder="Encontre aqui o que procuras..." aria-label="Ensira aqui a pesquisa que gostaria de fazer no site." >
+                <input type="text" name="search" id="procurador" placeholder="Encontre aqui o que procuras..."
+                    aria-label="Ensira aqui a pesquisa que gostaria de fazer no site.">
                 <img src="./Imagens/lupa.png" alt="lupa" id="img-lupa">
             </div>
-            
+
             <img src="./Imagens/ecommerce.png" alt="ecommerce" id="img-ecom">
         </div>
     </header>
@@ -41,38 +42,75 @@
         </ul>
     </nav>
     <main>
-        <img width="80%" height="200px" src="./Imagens/zelda.jpg" alt="Imagem de um jogo Zelda">
-        <h1>
-            BEM VINDO AO E-COMMERCE JUSTICE LEAGUE
-        </h1>
+        <li id="img-carrosel">
+            <img src="./Imagens/zelda.jpg" alt="Imagem de um jogo Zelda">
+        </li>
 
         <p hidden>
             <!--texto para mecanismos de busca--> <strong> Justice League Jogos Eletrônicos</strong>, produtos de
             video-games, jogos,
             nintendo, playstation, xbox, midia fisica, midia digital, forum
         </p>
-        <article>
+        <article id="spotlight">
             <h2>Produtos em Destaque</h2>
-            <section>
-                <h3>Favorito</h3>
-                <!-- <img src="./Imagens/switch.jpg" alt="Produto: Console Nintendo Switch"> -->
-                <p>Por apenas <strong>R$10,00</strong> para o professor que passar esse grupo</p>
-                <input type="button" value="Adicionar ao carrinho">
-            </section>
-            <section>
-                <h3>Queridinho</h3>
-                <!-- <img src="./Imagens/switch.jpg" alt="Jogo: Super Smash Bros Ultimate"> -->
-                <p>Por apenas <strong>R$1,00</strong> para o professor que dar 10 de nota para esse grupo</p>
-                <input type="button" value="Adicionar ao carrinho">
-            </section>
-            <section>
-                <h3>Destaque</h3>
-                <!-- <img src="./Imagens/cyberpunk.jpg" alt="Jogo: CyberPunk 2077"> -->
-                <p>
-                    Por apenas <strong>R$2,00</strong> para o professor que der um desconto no trabalho final
-                </p>
-                <input type="button" value="Adicionar ao carrinho">
-            </section>
+            <div>
+                <section class="product-spotlight">
+                    <img src="./Imagens/switch.jpg" alt="Produto: Console Nintendo Switch">
+                    <hr>
+                    <h3>Nintendo Switch</h3>
+                    <p>
+                        Por apenas
+                    </p>
+                    <div id="preço">
+                        <p>
+                            R$1999,00
+                        </p>
+                    </div>
+                    <input type="button" value="Adicionar ao carrinho">
+                </section>
+                <section class="product-spotlight">
+                    <img src="./Imagens/ssbU.jpg" alt="Jogo: Super Smash Bros Ultimate">
+                    <hr>
+                    <h3>Super Smash Bros Ultimate</h3>
+                    <p>
+                        Por apenas
+                    </p>
+                    <div id="preço">
+                        <p>
+                            R$299,00
+                        </p>
+                    </div>
+                    <input type="button" value="Adicionar ao carrinho">
+                </section>
+                <section class="product-spotlight">
+                    <img src="./Imagens/cyberpunk.jpg" alt="Jogo: CyberPunk 2077">
+                    <hr>
+                    <h3>CyberPunk 2077</h3>
+                    <p>
+                        Por apenas
+                    </p>
+                    <div id="preço">
+                        <p>
+                            R$299,00
+                        </p>
+                    </div>
+                    <input type="button" value="Adicionar ao carrinho">
+                </section>
+                <section class="product-spotlight">
+                    <img src="./Imagens/tlou2.jpg" alt="Jogo: CyberPunk 2077">
+                    <hr>
+                    <h3>The Last of Us 2</h3>
+                    <p>
+                        Por apenas
+                    </p>
+                    <div id="preço">
+                        <p>
+                            R$499,00
+                        </p>
+                    </div>
+                    <input type="button" value="Adicionar ao carrinho">
+                </section>
+            </div>
         </article>
     </main>
     <footer>
@@ -102,9 +140,9 @@
                 <a href="twitter.com/JusticeLeague">Twitter</a>
                 <br>
             </section>
-        </div>            
+        </div>
         <address id="copyright">
-            <p>Danilo, Fred, João Paulo, José Vitor, Lilica, Lucas, Rodrigo  @Copyright</p>
+            <p>Danilo, Fred, João Paulo, José Vitor, Lilica, Lucas, Rodrigo @Copyright</p>
         </address>
     </footer>
 </body>
