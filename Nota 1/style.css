@@ -217,6 +217,53 @@ main{
     padding: 1vh;
 }
 
+/* Responsividade */
+/* @media screen and (max-width: 1200px) {
+    #list-product{
+        margin: 1vh;
+        display: grid;
+        grid-gap: 2vh 2vh;
+        grid-template-columns: auto auto auto;
+        padding: 1vh;
+    } 
+
+    .product-product{
+        border-radius: 1vh;
+        border: solid #006579;
+        margin-bottom: 1vh;
+        text-align: center;
+        margin: auto;
+        width: 40vh;
+        height: 43vh;
+        background-color: #fff;
+    }
+
+    #div-procura{
+        display: none;
+        visibility: hidden;
+    }
+ }
+
+ @media screen and (max-width: 900px){
+    #list-product{
+        margin: 1vh;
+        display: grid;
+        grid-gap: 2vh 2vh;
+        grid-template-columns: auto auto;
+        padding: 1vh;
+    } 
+ }
+
+ @media screen and (max-width: 600px){
+    #list-product{
+        margin: 1vh;
+        display: grid;
+        grid-gap: 2vh 2vh;
+        grid-template-columns: auto;
+        padding: 1vh;
+    } 
+ } */
+
 #list-product img{
     width: 20vh;
     height: 20vh;
