@@ -118,7 +118,9 @@ main{
     height: 100%;
 }
 /* Inicio =========================== */
-#img-carrosel{
+
+
+/* #img-carrosel{
     list-style-type: none;
     
 }
@@ -133,7 +135,7 @@ main{
     align-content: center;
     max-height: 50vh;
     margin: auto;
-}
+} */
 
 #spotlight{
     /* background-color: #ffffff; */
@@ -411,7 +413,7 @@ main{
     text-align: center;
 }
 
-#button-form > input[type=button] {
+#button-form > input[type=submit] {
     width: 30%;
     background-color: #CD9955;
     color: white;
