@@ -6,10 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrinho Justice League Jogos Eletrônicos</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./Imagens/JL.ico">
     <link rel="stylesheet" href="./style.css">
+    <script src="./script.js"></script>
 </head>
 
-<body>
+<body onload="teste()">
     <header>
         <img src="./Imagens/funko1.png" alt="funko" id="img-funko">
         <div id="leaguecom">
@@ -52,41 +54,11 @@
                 </h2>
             </div>
             <hr>
-            <section class="cart-products">
-                <input type="checkbox" checked>
-                <img src="./Imagens/switch.jpg" alt="Produto: Console Nintendo Switch">
-                <div>
-                    <p class="cart-product-title">
-                        <strong>Nintendo Switch</strong>
-                    </p>
-                    <p class="cart-description">
-                        <strong>Video game barato para o professor Yuri</strong>
-                    </p>
-                </div>
-                <p class="cart-product-price">
-                    <strong>R$10,00</strong>
-                </p>
-            </section>
-            <hr>
-            <section class="cart-products">
-                <input type="checkbox" checked>
-                <img src="./Imagens/ssbU.jpg" alt="Jogo: Super Smash Bros Ultimate">
-                <div>
-                    <p class="cart-product-title">
-                        <strong>Nintendo Switch</strong>
-                    </p>
-                    <p class="cart-description">
-                        <strong>Video game barato para o professor Yuri</strong>
-                    </p>
-                </div>
-                <p class="cart-product-price">
-                    <strong>R$1,00</strong>
-                </p>
+            <section  class="cart-products">
             </section>
             <hr>
             <div id="cart-finalize-box">
-                <p>
-                    O valor total é: R$2388,00
+                <p id="total-cart">
                 </p>
                 <input id="cart-finalize" type="button" value="Finalizar compra">
             </div>
