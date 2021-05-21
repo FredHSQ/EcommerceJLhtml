@@ -139,7 +139,7 @@ main{
 }
 
 /* Responsividade */
-/* @media screen and (max-width: 1200px) {
+@media screen and (max-width: 1200px) {
     #list-product{
         margin: 1vh;
         display: grid;
@@ -155,7 +155,8 @@ main{
         text-align: center;
         margin: auto;
         width: 40vh;
-        height: 43vh;
+        min-height: 57vh;
+        height: fit-content;
         background-color: #fff;
     }
 
@@ -183,9 +184,10 @@ main{
         grid-template-columns: auto;
         padding: 1vh;
     } 
- } */
+ }
 
 #list-product img{
+    padding-top: 1vh;
     width: 20vh;
     height: 20vh;
     max-height: 20vh;
@@ -198,7 +200,8 @@ main{
     text-align: center;
     margin: auto;
     width: 40vh;
-    height: 43vh;
+    min-height: 57vh;
+    height: fit-content;
     background-color: #fff;
 }
 
