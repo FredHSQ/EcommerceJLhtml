@@ -31,10 +31,7 @@ var objeto4 = {
 };
 
 var obj = new Map();
-obj.set(1, objeto1);
-obj.set(2, objeto2);
-obj.set(3, objeto3);
-obj.set(4, objeto4);
+
 
 
 var soma = 0;
@@ -42,21 +39,20 @@ var soma = 0;
 function teste() {
     var teste = document.querySelector(".cart-products");
     funcaoSoma();
-    for (var i = 1; i <= obj.size; i++) {
-        console.log();
+    for (var i = 1; i <= localStorage.length; i++) {
         teste.innerHTML += `
-        <input type="checkbox" checked id="${(i)}check" onclick="funcaoCheck(obj.get(${(i)}))" name = "Product">
-                    <img src="${obj.get(i).img}" alt="Produto: Console Nintendo Switch">
+        <input type="checkbox" checked id="${(i)}check" onclick="funcaoCheck(JSON.parse(localStorage.getItem(${(i)})), ${(i)})" name = "Product">
+                    <img src="${JSON.parse(localStorage.getItem(i)).img}" alt="Produto: Console Nintendo Switch">
                     <div>
                         <p class="cart-product-title">
-                            <strong>${obj.get(i).nome}</strong>
+                            <strong>${JSON.parse(localStorage.getItem(i)).nome}</strong>
                         </p>
                         <p class="cart-description">
-                            <strong>${obj.get(i).descricao}</strong>
+                            <strong>${JSON.parse(localStorage.getItem(i)).descricao}</strong>
                         </p>
                     </div>
                     <p class="cart-product-price">
-                        <strong>R$ ${obj.get(i).preco}</strong>
+                        <strong>R$ ${JSON.parse(localStorage.getItem(i)).preco}</strong>
                     </p>
         `;
 
@@ -71,26 +67,30 @@ function teste() {
 };
 
 
-function funcaoCheck(p1) {
+function funcaoCheck(p1, i) {
 
-            if(p1.checked){
-               p1.checked = false;
-            }else{
-                p1.checked = true;
-            }
-            funcaoSoma();
-            var total = document.getElementById("total-cart");
-            total.innerHTML = `
+    if (p1.checked) {
+        var key = (JSON.stringify(i));
+        p1.checked = false;
+        localStorage.setItem(key, JSON.stringify(p1));
+    } else {
+        var key = (JSON.stringify(i));
+        p1.checked = true;
+        localStorage.setItem(key, JSON.stringify(p1));
+    }
+    funcaoSoma();
+    var total = document.getElementById("total-cart");
+    total.innerHTML = `
                 O valor total é: R$ ${soma}
              
             `
-  }
+}
 
 function funcaoSoma() {
-    soma=0;
-    for (var i = 1; i <= obj.size; i++) {
-        if(obj.get(i).checked){
-            soma = soma+obj.get(i).preco;
+    soma = 0;
+    for (var i = 1; i <= localStorage.length; i++) {
+        if (JSON.parse(localStorage.getItem(i)).checked) {
+            soma = soma + JSON.parse(localStorage.getItem(i)).preco;
         }
     }
 }

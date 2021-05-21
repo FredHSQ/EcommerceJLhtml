@@ -201,6 +201,9 @@ main{
     font-weight: bold;
     border: 2px solid;
 }
+.product-spotlight input :hover{
+
+}
 
 /* Atributos Footer =========================== */
 footer{

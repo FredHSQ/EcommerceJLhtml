@@ -8,6 +8,7 @@
     <title>Forum Justice League Jogos Eletrônicos</title>
     <link rel="shortcut icon" type="image/x-icon" href="../../Assets/JL.ico">
     <link rel="stylesheet" href="./style.css">
+    <script src="./script.js"></script>
 </head>
 
 <body>
@@ -54,7 +55,7 @@
                 <input type="text" id="emailForm" name="emailForm" placeholder="Seu email..">
                 <br>
                 <label for="phoneForm">Telefone</label>
-                <input type="text" id="phoneForm" name="phoneForm" placeholder="(99) 99999-9999">
+                <input onkeyup="telefoninho()" type="text" id="phoneForm" name="phoneForm" placeholder="(99) 99999-9999">
                 <br>
                 <label for="message">Mensagem</label>
                 <textarea name="message" cols="30" rows="5" class="html-text-box"

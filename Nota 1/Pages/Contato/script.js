@@ -36,6 +36,36 @@ obj.set(2, objeto2);
 obj.set(3, objeto3);
 obj.set(4, objeto4);
 
+function mask(o, f) {
+    setTimeout(function () {
+        var v = mphone(o.value);
+        if (v != o.value) {
+            o.value = v;
+        }
+    }, 1);
+}
+
+function telefoninho(){
+    var value = document.getElementById("phoneForm").value;
+    var formatted = value.replace(/^(\d{2})(\d{5})(\d{4}).*/, '($1) $2-$3');
+    console.log(value);
+    document.getElementById("phoneForm").value = formatted;
+}
+
+function mphone(v) {
+    var r = v.replace(/\D/g, "");
+    r = r.replace(/^0/, "");
+    if (r.length > 10) {
+        r = r.replace(/^(\d\d)(\d{5})(\d{4})./, "($1) $2-$3");
+    } else if (r.length > 5) {
+        r = r.replace(/^(\d\d)(\d{4})(\d{0,4})./, "($1) $2-$3");
+    } else if (r.length > 2) {
+        r = r.replace(/^(\d\d)(\d{0,5})/, "($1) $2");
+    } else {
+        r = r.replace(/^(\d*)/, "($1");
+    }
+    return r;
+}
 
 var soma = 0;
 
@@ -73,24 +103,24 @@ function teste() {
 
 function funcaoCheck(p1) {
 
-            if(p1.checked){
-               p1.checked = false;
-            }else{
-                p1.checked = true;
-            }
-            funcaoSoma();
-            var total = document.getElementById("total-cart");
-            total.innerHTML = `
+    if (p1.checked) {
+        p1.checked = false;
+    } else {
+        p1.checked = true;
+    }
+    funcaoSoma();
+    var total = document.getElementById("total-cart");
+    total.innerHTML = `
                 O valor total é: R$ ${soma}
              
             `
-  }
+}
 
 function funcaoSoma() {
-    soma=0;
+    soma = 0;
     for (var i = 1; i <= obj.size; i++) {
-        if(obj.get(i).checked){
-            soma = soma+obj.get(i).preco;
+        if (obj.get(i).checked) {
+            soma = soma + obj.get(i).preco;
         }
     }
 }
