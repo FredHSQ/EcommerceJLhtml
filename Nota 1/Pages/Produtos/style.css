@@ -13,7 +13,7 @@ li{
 
 body{
     /* background-color: #e5e5e5; */
-    background: url(./Assets/bg.jpg);
+    background: url(../../Assets/bg.jpg);
 }
 
 /* Header =========================== */
@@ -21,7 +21,7 @@ body{
 header{
     width: 100%;
     height: fit-content;
-    background: url(./Assets/bg.jpg);
+    background: url(../../Assets/bg.jpg);
 }
 
 #leaguecom{
@@ -117,90 +117,7 @@ header{
 main{
     height: 100%;
 }
-/* Inicio =========================== */
 
-
-/* #img-carrosel{
-    list-style-type: none;
-    
-}
-
-#img-carrosel img{
-    box-shadow: 1vh 1vh 5vh #e5e5e59b ;
-    border-radius: 5vh;
-    width: 90%;
-    max-width: 90%;
-    object-fit:cover;
-    display: flex;
-    align-content: center;
-    max-height: 50vh;
-    margin: auto;
-} */
-
-#spotlight{
-    /* background-color: #ffffff; */
-    margin: 1%;
-    border-radius: 1vw;
-}
-
-#spotlight h2{
-    color: #fff;
-    margin-left: 2%;
-    margin-bottom: 1%;
-    
-}
-
-#spotlight div{
-    display: flex;
-    justify-content: space-around;
-}
-
-.product-spotlight{
-    background-color: #ffffff;
-    text-align: center;
-    width: 20%;
-    height: fit-content;
-    border: 0.5vh solid black;
-    border-radius: 10px;
-    margin-bottom: 1%;
-}
-
-.product-spotlight h3{
-    margin: 3vh 0;
-    font-weight: 600;
-    vertical-align: middle;
-    font-size: 2.5vh;
-}
-
-.product-spotlight img{
-    margin: 2%;
-    max-width: 90%;
-    height: 30vh;
-}
-
-.product-spotlight p{
-    margin-left: 1vh;
-    margin-bottom: 0;
-    text-align: left;
-    font-size: 2vh;
-}
-
-.product-spotlight #preço p{
-    margin: 0;
-    font-weight: bold;
-    font-size: 5vh;
-}
-
-.product-spotlight input{
-    margin: 1vh;
-    height: 7vh;
-    width: 35vh;
-    border-radius: 10vh;
-    background-color: #CD9955;
-    font-size: 2.235vh;
-    font-weight: bold;
-    border: 2px solid;
-}
 /* Produtos =========================== */
 #general-products{
     margin: 1vh auto;
@@ -309,135 +226,6 @@ main{
     font-size: 4vh;
     text-decoration: none;
 }
-
-/* Carrinho =========================== */
-#carrinho{
-    margin: 1vh auto;
-    border-radius: 1vh;
-    background-color: #fff;
-    width: 95%;
-}
-
-#cart-title{
-    display: grid;
-    margin: auto;
-    grid-template-columns: 89% 15%;
-    margin-left: 3vh;
-}
-
-.cart-products{
-    display: grid;
-    grid-template-columns: 2% 15% 68% 15%;
-    margin: 1vh;
-}
-
-.cart-products input{
-    margin: auto;
-    transform: scale(1.5);
-}
-
-.cart-products .cart-product-price{
-    margin: auto;
-}
-
-.cart-description {
-
-    font-size: 70%;
-}
-
-.cart-products img{
-    margin: auto;
-    justify-content: left;
-    width: 20vh;
-    height: 20vh;
-    max-height: 20vh;
-}
-
-#cart-finalize-box {
-    display: grid;
-    grid-template-columns: 80% 10%;
-
-}
-
-#cart-finalize-box p{
-    margin: auto 0;
-    margin-left: 1vh;
-}
-
-#cart-finalize {
-    margin: 1vh;
-    height: 6vh;
-    width: 35vh;
-    border-radius: 10vh;
-    background-color: #CD9955;
-    font-size: 2.235vh;
-    font-weight: bold;
-    border: 2px solid;
-}
-
-/* Contato =========================== */
-#batSignal {
-    margin: 1vh auto;
-    border-radius: 1vh;
-    background-color: #fff;
-    width: 95%;
-}
-
-#batSignal h2{
-    margin-bottom: 1vh;
-    margin-left: 3vh;
-}
-
-#formJL input[type=text], select {
-    width: 95%;
-    padding: 12px 20px;
-    margin: 1vh 2vh;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-#formJL label{
-    margin: 0vh 1vh;
-}
-#formJL textarea {
-    width: 95%;
-    padding: 12px 20px;
-    margin: 1vh 2vh;
-    display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-    resize: none;
-}
-
-#button-form{
-
-    text-align: center;
-}
-
-#button-form > input[type=submit] {
-    width: 30%;
-    background-color: #CD9955;
-    color: white;
-    padding: 14px 20px;
-    margin: 1vh 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-#button-form > input[type=reset] {
-    width: 30%;
-    background-color: #CD9955;
-    color: white;
-    padding: 14px 20px;
-    margin: 1vh 0;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
 
 /* Atributos Footer =========================== */
 footer{

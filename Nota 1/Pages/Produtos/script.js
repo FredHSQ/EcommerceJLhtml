@@ -3,7 +3,7 @@ var objeto1 = {
     nome: "Lucas",
     descricao: "teste descricao",
     preco: 10,
-    img: "./Assets/switch.jpg"
+    img: "../../Assets/switch.jpg"
 };
 
 var objeto2 = {
@@ -11,7 +11,7 @@ var objeto2 = {
     nome: "Granato",
     descricao: "teste descricao 2",
     preco: 100,
-    img: "./Assets/cyberpunk.jpg"
+    img: "../../Assets/cyberpunk.jpg"
 };
 
 var objeto3 = {
@@ -19,7 +19,7 @@ var objeto3 = {
     nome: "Danilo",
     descricao: "teste descricao 3",
     preco: 10000,
-    img: "./Assets/tlou2.jpg"
+    img: "../../Assets/tlou2.jpg"
 };
 
 var objeto4 = {
@@ -27,7 +27,7 @@ var objeto4 = {
     nome: "Fred",
     descricao: "teste descricao 4",
     preco: 2,
-    img: "./Assets/tlou2banner.jpg"
+    img: "../../Assets/tlou2banner.jpg"
 };
 
 var obj = new Map();
