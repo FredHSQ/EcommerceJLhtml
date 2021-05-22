@@ -160,6 +160,7 @@ main{
     text-align: center;
     width: 20%;
     height: fit-content;
+    min-height: 70vh;
     border: 0.5vh solid black;
     border-radius: 10px;
     margin-bottom: 1%;
@@ -173,9 +174,12 @@ main{
 }
 
 .product-spotlight img{
+    
+    border-radius: 100%;
+    padding-top: 1vh;
     margin: 2%;
     max-width: 90%;
-    height: 30vh;
+    height: 35vh;
 }
 
 .product-spotlight p{

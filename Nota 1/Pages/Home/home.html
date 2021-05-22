@@ -15,7 +15,7 @@
     <script src="./script.js"></script>
 </head>
 
-<body>
+<body onload="fetchData()">
     <header>
         <img src="../../Assets/funko1.png" alt="funko" id="img-funko">
         <div id="leaguecom">
@@ -82,63 +82,7 @@
         </p>
         <article id="spotlight">
             <h2>Produtos em Destaque</h2>
-            <div>
-                <section class="product-spotlight">
-                    <img src="../../Assets/switch.jpg" alt="Produto: Console Nintendo Switch">
-                    <hr>
-                    <h3>Nintendo Switch</h3>
-                    <p>
-                        Por apenas
-                    </p>
-                    <div id="preço">
-                        <p>
-                            R$1999,00
-                        </p>
-                    </div>
-                    <input class="addCart" type="button" value="Adicionar ao carrinho" onclick="adicionarPC()">
-                </section>
-                <section class="product-spotlight">
-                    <img src="../../Assets/ssbU.jpg" alt="Jogo: Super Smash Bros Ultimate">
-                    <hr>
-                    <h3>Super Smash Bros Ultimate</h3>
-                    <p>
-                        Por apenas
-                    </p>
-                    <div id="preço">
-                        <p>
-                            R$299,00
-                        </p>
-                    </div>
-                    <input class="addCart" type="button" value="Adicionar ao carrinho">
-                </section>
-                <section class="product-spotlight">
-                    <img src="../../Assets/cyberpunk.jpg" alt="Jogo: CyberPunk 2077">
-                    <hr>
-                    <h3>CyberPunk 2077</h3>
-                    <p>
-                        Por apenas
-                    </p>
-                    <div id="preço">
-                        <p>
-                            R$299,00
-                        </p>
-                    </div>
-                    <input class="addCart" type="button" value="Adicionar ao carrinho">
-                </section>
-                <section class="product-spotlight">
-                    <img src="../../Assets/tlou2.jpg" alt="Jogo: CyberPunk 2077">
-                    <hr>
-                    <h3>The Last of Us 2</h3>
-                    <p>
-                        Por apenas
-                    </p>
-                    <div id="preço">
-                        <p>
-                            R$499,00
-                        </p>
-                    </div>
-                    <input class="addCart" type="button" value="Adicionar ao carrinho">
-                </section>
+            <div id="container-spotlight">
             </div>
         </article>
     </main>

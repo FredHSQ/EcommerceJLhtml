@@ -1,7 +1,7 @@
 var dados;
 var mapas;
 var xhr = new XMLHttpRequest();
-var xhz = new XMLHttpRequest();
+
 
 function page1(){
     var number = document.getElementById('1')
@@ -46,9 +46,17 @@ xhr.onreadystatechange = () => {
                         <div class="products-price">
                             <p> R$ ${element.added_by_status.owned},99 </p>
                         </div>
-                        <p>Ver detalhes</p>
+                        <p onclick="openModal(${element.id})" style="border: none; background: none; color: black; font-family: Verdana, Geneva, Tahoma, sans-serif; text-decoration: underline; font-size: 2vh;"  data-toggle="modal" data-target=".bd-example-modal-lg">
+                            Ver detalhes
+                        </p>
                         <input type="button" value="Adicionar ao Carrinho" onclick="adicionarPC(${element.id},'${element.name}','${element.background_image}',${element.added_by_status.owned},'${element.released}')">
                     </section>
+                    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg" role="document" style="width: 90vw; max-width: max-content;" >
+                            <div class="modal-content" id="container">
+                            </div>
+                        </div>
+                    </div>
                 `  
             }).join("");
             
@@ -57,7 +65,78 @@ xhr.onreadystatechange = () => {
 }
 }
 
+function openModal(id) {
+    console.log("Iniciei");
+    var xhr = new XMLHttpRequest();
 
+    xhr.open('GET', `https://api.rawg.io/api/games/${id}?key=ec01ab7e989a453d91e17e1c5913871e`);
+    xhr.send();
+
+    xhr.onreadystatechange = () => {
+
+        if (xhr.readyState == 4) {
+            if (xhr.status == 200) {
+                //    console.log(JSON.parse(xhr.responseText));
+                console.log("Encontrei dados");
+                dados = JSON.parse(xhr.responseText);
+                console.log(dados);
+
+                document.getElementById('container').innerHTML = 
+                `
+                    <div class="modal-header">
+                        <article id="general-products"  >
+                            <div>
+                                <h1>
+                                    ${dados.name}
+                                </h1>
+                                <hr style="border: 1px solid black;">
+                            </div>
+                            <img style="height: 100%; width: 100%; max-height: none;" src="${dados.background_image}">
+                            
+                            <div style="display: flex;">
+                                <div>
+                                    <div>
+                                        <h2 style="color: rgb(175,31,36);">
+                                            Descrição:
+                                        </h2>
+                                        <p>
+                                            ${dados.description}                                        
+                                        </p>
+                                    </div>
+                                    <div style="display: flex;">
+                                        <div style="display: flex;">
+                                            <h2 style="color: rgb(175,31,36);">
+                                                Avaliação:
+                                            </h2>
+                                            <h2 style="margin: auto; border: solid rgb(107, 22, 39); border-radius: 50%; padding: 1vh; font-size: 300%;">
+                                                ${dados.rating}
+                                            </h2>
+                                        </div>
+                                        <div style="margin: auto;">
+                                            <h2 style="color: rgb(175,31,36);">
+                                                Plataformas:
+                                            </h2>
+                                            <p>
+                                                <ul>
+                                                ${dados.platforms.map(element => {
+                                                    return `
+                                                    <li>${element.platform.name}</li>
+                                                    `
+                                                }).join("")}
+                                                </ul>
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </article>
+                    </div>
+                `
+            }
+        }
+    }
+}
 
 function adicionarPC(id,nome, img, preco,desc){
 
