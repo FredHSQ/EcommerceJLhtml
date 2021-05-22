@@ -57,11 +57,9 @@ xhr.onreadystatechange = () => {
 }
 }
 
-var count = 0
+
 
 function adicionarPC(id,nome, img, preco,desc){
-
-count = count + 1
 
  var obj = new Object();
  obj.nome = nome;
@@ -75,6 +73,6 @@ localStorage.setItem(JSON.stringify(id), JSON.stringify(obj));
 
 }
 
-function imprime(element, al,aw,aa){
-    console.log(element, al,aw,aa );
-}
+// function imprime(element, al,aw,aa){
+//     console.log(element, al,aw,aa );
+// }
