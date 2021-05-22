@@ -2,6 +2,7 @@
 function teste() {
     var teste = document.querySelector(".cart-products");
     funcaoSoma();
+    
     for (var i = 1; i <= localStorage.length; i++) {
         teste.innerHTML += `
         <input type="checkbox" checked id="${(i)}check" onclick="funcaoCheck(JSON.parse(localStorage.getItem(${(i)})), ${(i)})" name = "Product">

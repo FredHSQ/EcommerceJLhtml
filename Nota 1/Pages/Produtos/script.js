@@ -47,7 +47,7 @@ xhr.onreadystatechange = () => {
                             <p> R$ ${element.added_by_status.owned},99 </p>
                         </div>
                         <p>Ver detalhes</p>
-                        <input type="button" value="Adicionar ao Carrinho" onclick="adicionarPC(${element.id})">
+                        <input type="button" value="Adicionar ao Carrinho" onclick="adicionarPC(${element.id},'${element.name}','${element.background_image}',${element.added_by_status.owned},'${element.released}')">
                     </section>
                 `  
             }).join("");
@@ -57,12 +57,24 @@ xhr.onreadystatechange = () => {
 }
 }
 
-function adicionarPC(element){
+var count = 0
 
-localStorage.setItem(JSON.stringify(element.id), JSON.stringify(element));
+function adicionarPC(id,nome, img, preco,desc){
+
+count = count + 1
+
+ var obj = new Object();
+ obj.nome = nome;
+ obj.preco = preco;
+ obj.img = img;
+ obj.checked = true;
+ obj.descricao = desc
+
+ console.log(obj);
+localStorage.setItem(JSON.stringify(id), JSON.stringify(obj));
 
 }
 
-function imprime(element){
-    console.log(element);
+function imprime(element, al,aw,aa){
+    console.log(element, al,aw,aa );
 }
