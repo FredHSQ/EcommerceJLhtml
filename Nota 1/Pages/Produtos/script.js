@@ -1,5 +1,6 @@
 var dados;
 var mapas;
+
 var xhr = new XMLHttpRequest();
 
 
@@ -23,7 +24,7 @@ function page1(){
      xhr.send();
   }
 
-
+  
 function fetchData() {
 console.log("Iniciei");
 
@@ -44,12 +45,12 @@ xhr.onreadystatechange = () => {
                         <hr>
                         <h6>${element.name}</h6>
                         <div class="products-price">
-                            <p> R$ ${element.added_by_status.owned},99 </p>
+                            <p> R$ ${element.suggestions_count},99 </p>
                         </div>
                         <p class="product-view" onclick="openModal(${element.id})" data-toggle="modal" data-target=".bd-example-modal-lg">
                             Ver detalhes
                         </p>
-                        <input type="button" class="add-cart" value="Adicionar ao Carrinho" onclick="adicionarPC(${element.id},'${element.name}','${element.background_image}',${element.added_by_status.owned},'${element.released}')">
+                        <input type="button" class="add-cart" value="Adicionar ao Carrinho" onclick="adicionarPC(${element.id},'${element.name}','${element.background_image}',${element.suggestions_count},'${element.released}')">
                         <p id="${element.id}" style="visibility:hidden;margin-bottom:-8px;color:green;text-decoration:none;">Adicionado com sucesso!!!</p>
                        
                     </section>
@@ -154,3 +155,52 @@ localStorage.setItem(JSON.stringify(id), JSON.stringify(obj));
   document.getElementById(id).style.visibility = 'visible'
 
 }
+
+function search() {
+    document.getElementById('pages').style.visibility = 'hidden'
+
+    var pesquisa = document.querySelector('#procurador');
+    
+    var agora = (pesquisa.value).toLowerCase()
+
+    console.log(agora);
+
+     xhr.open('GET', `https://api.rawg.io/api/games?key=ec01ab7e989a453d91e17e1c5913871e&page_size=30&platforms=18,1,7,8&search=${agora}`);
+     xhr.send();
+    
+    
+    xhr.onreadystatechange = () => {
+    
+        if (xhr.readyState == 4) {
+            if (xhr.status == 200) {
+                dados = JSON.parse(xhr.responseText).results;
+                console.log(dados);
+                document.getElementById('list-product').innerHTML =
+                dados.map(element => {
+                    return `<section class="product-product">
+                            <img src="${element.background_image}" alt="Produto: Console Nintendo Switch">
+                            <hr>
+                            <h6>${element.name}</h6>
+                            <div class="products-price">
+                                <p> R$ ${element.suggestions_count},99 </p>
+                            </div>
+                            <p class="product-view" onclick="openModal(${element.id})" data-toggle="modal" data-target=".bd-example-modal-lg">
+                                Ver detalhes
+                            </p>
+                            <input type="button" class="add-cart" value="Adicionar ao Carrinho" onclick="adicionarPC(${element.id},'${element.name}','${element.background_image}',${element.suggestions_count},'${element.released}')">
+                            <p id="${element.id}" style="visibility:hidden;margin-bottom:-8px;color:green;text-decoration:none;">Adicionado com sucesso!!!</p>
+                           
+                        </section>
+                        <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+                            <div class="modal-dialog modal-lg" role="document" style="width: 90vw; max-width: max-content;" >
+                                <div class="modal-content" id="container">
+                                </div>
+                            </div>
+                        </div>
+                    `  
+                }).join("");
+                
+            }
+        }
+    }
+    }

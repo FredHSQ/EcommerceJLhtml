@@ -21,9 +21,9 @@
         <div id="leaguecom">
             <img src="../../Assets/liga.svg" alt="Justice league" id="img-jl">
             <div id="div-procura">
-                <input type="text" name="search" id="procurador" placeholder="Encontre aqui o que procuras..."
+                <input type="text" name="search" id="procurador"  placeholder="Encontre aqui o que procuras..."
                     aria-label="Ensira aqui a pesquisa que gostaria de fazer no site.">
-                <img src="../../Assets/lupa.png" alt="lupa" id="img-lupa">
+                <img src="../../Assets/lupa.png" alt="lupa" id="img-lupa" onclick="search()">
             </div>
 
             <img src="../../Assets/ecommerce.png" alt="ecommerce" id="img-ecom">
@@ -54,7 +54,7 @@
             <div id="list-product">
             </div>
         </article>
-        <nav aria-label="Navegação de página exemplo">
+        <nav aria-label="Navegação de página" id="pages" style="visibility: visible;">
             <ul class="pagination  justify-content-end" style="margin-right: 1.3vw;">
               
               <li class="page-item"><a onclick="page1()" class="page-link" id="1" href="#">1</a></li>

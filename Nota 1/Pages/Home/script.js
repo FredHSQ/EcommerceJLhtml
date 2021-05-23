@@ -29,10 +29,10 @@ function fetchData() {
                     </p>
                     <div id="preço">
                         <p>
-                            R$${element.added_by_status.owned},99
+                            R$${element.suggestions_count},99
                         </p>
                     </div>
-                    <input class="add-cart" type="button" value="Adicionar ao Carrinho" onclick="adicionarPC(${element.id},'${element.name}','${element.background_image}',${element.added_by_status.owned},'${element.released}')">
+                    <input class="add-cart" type="button" value="Adicionar ao Carrinho" onclick="adicionarPC(${element.id},'${element.name}','${element.background_image}',${element.suggestions_count},'${element.released}')">
                     </section>
                     `
                     }).join("");
