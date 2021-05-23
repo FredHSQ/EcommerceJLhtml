@@ -50,6 +50,7 @@ xhr.onreadystatechange = () => {
                             Ver detalhes
                         </p>
                         <input type="button" value="Adicionar ao Carrinho" onclick="adicionarPC(${element.id},'${element.name}','${element.background_image}',${element.added_by_status.owned},'${element.released}')">
+                        <p id="${element.id}" style="visibility:hidden;margin-bottom:-8px;color:green;text-decoration:none;">Adicionado com sucesso!!!</p>
                     </section>
                     <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-lg" role="document" style="width: 90vw; max-width: max-content;" >
@@ -147,11 +148,8 @@ function adicionarPC(id,nome, img, preco,desc){
  obj.checked = true;
  obj.descricao = desc
 
- console.log(obj);
 localStorage.setItem(JSON.stringify(id), JSON.stringify(obj));
 
-}
+  document.getElementById(id).style.visibility = 'visible'
 
-// function imprime(element, al,aw,aa){
-//     console.log(element, al,aw,aa );
-// }
+}

@@ -181,6 +181,11 @@ main{
     border: 2px solid;
 }
 
+#remove-button{
+    background:none;
+    border: none;
+    text-decoration: underline;
+}
 
 
 /* Atributos Footer =========================== */
