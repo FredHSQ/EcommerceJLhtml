@@ -46,10 +46,10 @@ xhr.onreadystatechange = () => {
                         <div class="products-price">
                             <p> R$ ${element.added_by_status.owned},99 </p>
                         </div>
-                        <p onclick="openModal(${element.id})" style="border: none; background: none; color: black; font-family: Verdana, Geneva, Tahoma, sans-serif; text-decoration: underline; font-size: 2vh;"  data-toggle="modal" data-target=".bd-example-modal-lg">
+                        <p class="product-view" onclick="openModal(${element.id})" data-toggle="modal" data-target=".bd-example-modal-lg">
                             Ver detalhes
                         </p>
-                        <input type="button" value="Adicionar ao Carrinho" onclick="adicionarPC(${element.id},'${element.name}','${element.background_image}',${element.added_by_status.owned},'${element.released}')">
+                        <input class="add-cart"w type="button" value="Adicionar ao Carrinho" onclick="adicionarPC(${element.id},'${element.name}','${element.background_image}',${element.added_by_status.owned},'${element.released}')">
                     </section>
                     <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-lg" role="document" style="width: 90vw; max-width: max-content;" >

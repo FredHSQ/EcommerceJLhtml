@@ -112,7 +112,42 @@ header{
     background: rgb(175,31,36);
 }
 
+.nav-buttons {
+    display: grid;
+    width: 25%;
+    height: 3.8vw;
+    text-align: center;
+}
 
+.nav-buttons:hover {
+    background: rgb(117, 10, 14);
+    display: grid;
+    grid-column: auto auto auto auto;
+}
+
+/*
+@media screen and (max-width: 900px) {
+    #nav-header{
+        overflow: hidden;
+    }
+    #nav-header a{
+        float: left;
+        color: #f2f2f2;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+    #nav-header a:hover{
+        background: rgb(117, 10, 14);
+        color: white;
+    }
+    #nav-header a.active {
+        background-color: rgb(175,31,36);
+        color: white;
+    }
+}
+*/
 /* Main =========================== */
 main{
     height: 100%;
@@ -205,6 +240,19 @@ main{
     background-color: #fff;
 }
 
+.product-view {
+    border: none; 
+    background: none; 
+    color: black; 
+    font-family: Verdana, Geneva, Tahoma, sans-serif; 
+    text-decoration: underline; 
+    font-size: 2vh;
+}
+
+.product-view:hover{
+    cursor: pointer;
+}
+
 .product-product input{
     margin: 1vh;
     height: 6vh;
@@ -214,6 +262,11 @@ main{
     font-size: 2.235vh;
     font-weight: bold;
     border: 2px solid;
+}
+
+.add-cart:hover{
+    background-color: #a1691f;
+    cursor: pointer;
 }
 
 .product-product p{
@@ -240,6 +293,10 @@ footer{
     width: 100%;
     height: 27%;
     margin-bottom: -100vh;
+}
+
+#container-contact address a:hover {
+    text-decoration: underline;
 }
 
 #container-general-footer{
@@ -271,7 +328,7 @@ footer{
    height: 40px;
 }
 
-/* Responsividade 
+/* Responsividade */
 @media screen and (max-width: 450px) {
     #logo-footer img{
         width: 60%;
@@ -288,7 +345,7 @@ footer{
         font-size: 10px;
     }
 }
-*/
+
 #container-contact{
     position: absolute;
     right: 0;
