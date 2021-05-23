@@ -22,29 +22,31 @@
             <img src="../../Assets/liga.svg" alt="Justice league" id="img-jl">
             <div id="div-procura">
                 <input type="text" name="search" id="procurador" placeholder="Encontre aqui o que procuras..."
-                    aria-label="Ensira aqui a pesquisa que gostaria de fazer no site.">
+                aria-label="Ensira aqui a pesquisa que gostaria de fazer no site.">
                 <img src="../../Assets/lupa.png" alt="lupa" id="img-lupa">
             </div>
-
+            
             <img src="../../Assets/ecommerce.png" alt="ecommerce" id="img-ecom">
+            <button id="nav-mobile" onclick="toggleMenu()">Menu <span id="nav-icon"></span></button>
         </div>
     </header>
     <nav id="nav-header">
         <!-- <img src="../../Assets/home.png" alt="icone home"> -->
         <ul>
-            <li>
+            <li class="nav-buttons">
                 <a href="#">Inicio</a>
             </li>
-            <li>
+            <li class="nav-buttons">
                 <a href="../Produtos/produtos.html">Produtos</a>
             </li>
 
-            <li>
+            <li class="nav-buttons">
                 <a href="../Contato/contato.html">Contato</a>
             </li>
-            <li>
+            <li class="nav-buttons">
                 <a href="../Carrinho/carrinho.html">Carrinho</a>
             </li>
+            <li id="procura-mobile"></li>
         </ul>
     </nav>
     <main>
@@ -54,7 +56,7 @@
               <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
               <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
             </ol>
-            <div style="height: 60vh;margin: auto; margin-top: 1vh; width: 98%;" class="carousel-inner">
+            <div style="height: 60%;margin: auto; margin-top: 1vh; width: 98%;" class="carousel-inner">
               <div class="carousel-item active">
                 <img class="d-block w-100" src="../../Assets/tlou2banner.jpg" alt="First slide">
               </div>
