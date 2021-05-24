@@ -127,7 +127,9 @@ function funcaoSoma() {
 
 function toggleMenu() {
     const nav = document.getElementById("nav-header")
+    const navIcon = document.getElementById("nav-icon")
     nav.classList.toggle("active");
+    navIcon.classList.toggle("active");
 
 }
 

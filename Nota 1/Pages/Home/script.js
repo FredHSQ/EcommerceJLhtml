@@ -57,7 +57,9 @@ function adicionarPC(id, nome, img, preco, desc) {
 
 function toggleMenu() {
     const nav = document.getElementById("nav-header")
+    const navIcon = document.getElementById("nav-icon")
     nav.classList.toggle("active");
+    navIcon.classList.toggle("active");
 
 }
 

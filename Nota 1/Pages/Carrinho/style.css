@@ -220,7 +220,7 @@ header{
         visibility: hidden;
     }
     #nav-header.active{
-        height: calc(100vh - 70px);
+        height: fit-content;
         visibility: visible;
     }
     #nav-header.active ul{
