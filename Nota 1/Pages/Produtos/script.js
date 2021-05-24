@@ -156,12 +156,12 @@ localStorage.setItem(JSON.stringify(id), JSON.stringify(obj));
 
 }
 
-function search() {
+function search(id) {
     document.getElementById('pages').style.visibility = 'hidden'
 
-    var pesquisa = document.querySelector('#procurador');
+    var pesquisa = document.querySelector(id);
     
-    var agora = (pesquisa.value).toLowerCase()
+    var agora = (pesquisa.value).toLowerCase();
 
     console.log(agora);
 
@@ -216,7 +216,7 @@ function search() {
         <div id="div-procura-mobile" style="display:flex; width:90%;">
             <input style="width:80%;" type="text" name="search" id="procurador-mobile" placeholder="Encontre aqui o que procuras..."
             aria-label="Ensira aqui a pesquisa que gostaria de fazer no site.">
-            <img src="../../Assets/lupa.png" alt="lupa" id="img-lupa-mobile">
+            <img src="../../Assets/lupa.png" alt="lupa" id="img-lupa-mobile" onclick="search('#procurador-mobile')">
         </div>
         `
     

@@ -441,6 +441,7 @@ footer{
     }
     .contact-info {
         /* position: absolute; */
+        display: none;
         visibility: hidden;
     }
  
@@ -451,13 +452,13 @@ footer{
     grid-template-columns: auto auto auto;
 /* formata os links =========================== */
 }
+
 address{
     text-decoration: none;
     color: white;
 }
 
 #copyright{
-
     text-align: right;
     color: white;
     margin-bottom: 0;
@@ -469,4 +470,3 @@ address{
 #container-contact address a:hover {
     text-decoration: underline;
 }
-

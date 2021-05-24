@@ -33,6 +33,7 @@ function fetchData() {
                         </p>
                     </div>
                     <input class="add-cart" type="button" value="Adicionar ao Carrinho" onclick="adicionarPC(${element.id},'${element.name}','${element.background_image}',${element.suggestions_count},'${element.released}')">
+                    <p id="${element.id}" style="visibility:hidden;margin-bottom:-8px;color:green;text-decoration:none;text-align:center;">Adicionado com sucesso!!!</p>
                     </section>
                     `
                     }).join("");
@@ -52,6 +53,8 @@ function adicionarPC(id, nome, img, preco, desc) {
 
     console.log(obj);
     localStorage.setItem(JSON.stringify(id), JSON.stringify(obj));
+
+    document.getElementById(id).style.visibility = 'visible'
 
 }
 
