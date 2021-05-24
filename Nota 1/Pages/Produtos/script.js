@@ -204,3 +204,48 @@ function search() {
         }
     }
     }
+    
+    function toggleMenu() {
+        const nav = document.getElementById("nav-header")
+        const navIcon = document.getElementById("nav-icon")
+        nav.classList.toggle("active");
+        navIcon.classList.toggle("active");
+    
+        var procurar = 
+        `
+        <div id="div-procura-mobile" style="display:flex; width:90%;">
+            <input style="width:80%;" type="text" name="search" id="procurador-mobile" placeholder="Encontre aqui o que procuras..."
+            aria-label="Ensira aqui a pesquisa que gostaria de fazer no site.">
+            <img src="../../Assets/lupa.png" alt="lupa" id="img-lupa-mobile">
+        </div>
+        `
+    
+        document.getElementById("procura-mobile").innerHTML = procurar
+    
+    }
+    
+    function toggleAbout() {
+        const about = document.getElementById("about-mobile");
+        var info = 
+        `
+        <div class="modal" tabindex="-1">
+        <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Modal title</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <p>Modal body text goes here.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+        `
+    
+        about.innerHTML = info
+    }

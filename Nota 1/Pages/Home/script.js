@@ -57,20 +57,8 @@ function adicionarPC(id, nome, img, preco, desc) {
 
 function toggleMenu() {
     const nav = document.getElementById("nav-header")
-    const navIcon = document.getElementById("nav-icon")
     nav.classList.toggle("active");
-    navIcon.classList.toggle("active");
 
-    var procurar = 
-    `
-    <div id="div-procura-mobile">
-        <input type="text" name="search" id="procurador-mobile" placeholder="Encontre aqui o que procuras..."
-        aria-label="Ensira aqui a pesquisa que gostaria de fazer no site.">
-        <img src="../../Assets/lupa.png" alt="lupa" id="img-lupa-mobile">
-    </div>
-    `
-
-    document.getElementById("procura-mobile").innerHTML = procurar
 }
 
 function toggleAbout() {

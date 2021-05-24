@@ -9,45 +9,52 @@
     <link rel="shortcut icon" type="image/x-icon" href="../../Assets/JL.ico">
     <link rel="stylesheet" href="./style.css">
     <script src="./script.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
 </head>
 
 <body>
     <header>
         <img src="../../Assets/funko1.png" alt="funko" id="img-funko">
         <div id="leaguecom">
-            <img src="../../Assets/liga.svg" alt="Justice league" id="img-jl">
-            <div id="div-procura">
+            <img src="../../Assets/liga.svg" alt="Justice league" id="img-jl" onclick="window.open('../Home/home.html', '_self')">
+            <!-- <div id="div-procura">
                 <input type="text" name="search" id="procurador" placeholder="Encontre aqui o que procuras..."
-                    aria-label="Ensira aqui a pesquisa que gostaria de fazer no site.">
+                aria-label="Ensira aqui a pesquisa que gostaria de fazer no site.">
                 <img src="../../Assets/lupa.png" alt="lupa" id="img-lupa">
-            </div>
-
+            </div> -->
+            
             <img src="../../Assets/ecommerce.png" alt="ecommerce" id="img-ecom">
+            <button id="nav-mobile" onclick="toggleMenu()">Menu <span id="nav-icon"></span></button>
         </div>
     </header>
     <nav id="nav-header">
         <!-- <img src="../../Assets/home.png" alt="icone home"> -->
         <ul>
-            <li>
+            <li class="nav-buttons">
                 <a href="../Home/home.html">Inicio</a>
             </li>
-            <li>
+            <li class="nav-buttons">
                 <a href="../Produtos/produtos.html">Produtos</a>
             </li>
 
-            <li>
+            <li class="nav-buttons">
                 <a href="#">Contato</a>
             </li>
-            <li>
+            <li class="nav-buttons">
                 <a href="../Carrinho/carrinho.html">Carrinho</a>
             </li>
+            <li id="procura-mobile"></li>
         </ul>
     </nav>
     <main>
         <section id="batSignal">
             <h2>Ligue o Bat-Sinal</h2>
             <hr>
-            <form id="formJL" method="post" action="http://">
+            <form id="formJL" method="post" action="MAILTO:frederico.shere@gmail.com">
                 <label for="nameForm">Nome</label>
                 <input type="text" id="nameForm" name="nameForm" placeholder="Seu nome..">
                 <br>
@@ -62,7 +69,44 @@
                 aria-label="Digite sua mensagem aqui" placeholder="Sua mensagem aqui..."></textarea>
                 <br>
                 <div id="button-form">
-                    <input type="submit" value="Enviar" class="html-text-box">
+                    <button type="submit" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" style="width: 30%;
+                    background-color: #CD9955;
+                    color: white;
+                    padding: 14px 20px;
+                    margin: 1vh 0;
+                    margin-bottom: 1.45vh;
+                    border: none;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    box-shadow: 0;
+                    outline: 0;">
+                        Enviar
+                      </button>
+                      
+                      <!-- Modal -->
+                      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog" role="document">
+                          <div class="modal-content" style="width: 100%;">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLabel">Bat-Sinal Enviado</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                                <img src="../../Assets/ajax.jpg" alt="ajax" style="width: 40%;height: 40%;justify-content: center;">
+                                Olá! recebemos sua mensagem !!  <br> 
+                                <p>
+                                Estaremos entrando em contato em Breve! Agradecemos o interesse em nossas Soluções!
+                            </p>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
                     <input type="reset" value="Resetar" class="html-text-box">  
                 </div>
             </form>
@@ -70,30 +114,76 @@
     </main>
     <footer>
         <div id="container-general-footer">
+
             <section id="container-about">
-                <h3>Sobre a loja</h3>
-                <p>
+            <!-- Button trigger modal -->
+            <h3 id="about-mobile" data-toggle="modal" data-target="#exampleModalLong">
+                Sobre a loja
+            </h3>
+            
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLongTitle" style="color: black;">Sobre a loja</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close" >
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                    </div>
+                    <div class="modal-body" style="color: black;">
+                        Melhor loja de todas para comprar coisas relacionadas a jogos. Bem vindos a Justice League Jogos Eletrônicos
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+                </div>
+            </div>
+
+                <h3 class="info-loja">Sobre a loja</h3>
+                <p class="info-loja">
                     Melhor loja de todas para comprar coisas relacionadas a jogos. Bem vindos a
+                    <blockquote class="info-loja"> Justice League Jogos Eletrônicos</blockquote>
                 </p>
-                <blockquote> Justice League Jogos Eletrônicos</blockquote>
             </section>
             <div id="logo-footer">
                 <img src="../../Assets/logo-footer.png" alt="logo-footer">
             </div>
             <section id="container-contact">
-                <h3>Contatos</h3>
+                <h3 id="contact-mobile" data-toggle="modal" data-target="#info-of-contact">
+                    Contatos
+                </h3> 
+                <!-- Modal -->
+                <div class="modal fade" id="info-of-contact" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle" style="color: black;">Contatos</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close" >
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body" style="color: black;">
+                        <p>Telefone: +552499999999</p>
+                        <p>Email de Contato: justice@league.com</p>
+                    </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <h3 class="contact-info">Contatos</h3>
                 <address>
-                    <a href="tel:+552499999999">Telefone: +552499999999</a>
-                    <br>
-                    <a href="mailto:justice@league.com">Email de Contato: justice@league.com</a>
-                    <br>
+                    <a href="tel:+552499999999" class="contact-info">Telefone: +552499999999</a>
+                    <a href="mailto:justice@league.com" class="contact-info">Email de Contato: justice@league.com</a>
+                    <div id="midiaSocial">
+                        <a href="facebook.com/JusticeLeague"><img src="../../Assets/face.png" alt="Logo facebook" class="media-logo"></a>
+                        <a href="instagram.com/JusticeLeague"><img src="../../Assets/intagram.png" alt="Logo Inst" class="media-logo"></a>
+                        <a href="twitter.com/JusticeLeague"><img src="../../Assets/twitter.png" alt="Logo twitter" class="media-logo"></a>  
+                    </div>
                 </address>
-                <a href="facebook.com/JusticeLeague"><img src="../../Assets/face.png" alt="Logo facebook" class="media-logo"></a>
-                
-                <a href="instagram.com/JusticeLeague"><img src="../../Assets/intagram.png" alt="Logo Inst" class="media-logo"></a>
-                
-                <a href="twitter.com/JusticeLeague"><img src="../../Assets/twitter.png" alt="Logo twitter" class="media-logo"></a>
-                <br>
             </section>
         </div>
         <address id="copyright">

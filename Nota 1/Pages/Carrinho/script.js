@@ -5,9 +5,10 @@ function cart() {
 
     for (var i = 0; i < localStorage.length; i++) {
         mapCart.innerHTML += `
+        
             <input type="checkbox" checked id="${(i)}check" onclick="funcaoSoma(${(i)})" name="Product">
                 <img style="margin-bottom:10px" src="${JSON.parse(localStorage.getItem(localStorage.key(i))).img}" alt="Produto: Console Nintendo Switch">
-                    <div>
+                    <div id="container-cart-product-description">
                         <p class="cart-product-title" style="margin-bottom: 3vh">
                             <strong>${JSON.parse(localStorage.getItem(localStorage.key(i))).nome}</strong>
                         </p>
@@ -108,4 +109,34 @@ function finished(i){
     alert("Compra Finalizada com sucesso!!!")
     
 }
+function toggleMenu() {
+    const nav = document.getElementById("nav-header")
+    nav.classList.toggle("active");
 
+}
+
+function toggleAbout() {
+    const about = document.getElementById("about-mobile");
+    var info = 
+    `
+    <div class="modal" tabindex="-1">
+    <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>Modal body text goes here.</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+    `
+
+    about.innerHTML = info
+}
