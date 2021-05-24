@@ -540,14 +540,14 @@ footer{
 /* formata os links =========================== */
 }
 
-address{
+address a{
     text-decoration: none;
-    color: white;
+    color: #ffffff;
 }
 
-#copyright{
+#copyright address{
     text-align: right;
-    color: white;
+    color: #ffffff;
     margin-bottom: 0;
     margin-right: 1%;
     margin-top: 1%;
@@ -556,4 +556,5 @@ address{
 
 #container-contact address a:hover {
     text-decoration: underline;
+    color: #ffffff;
 }
