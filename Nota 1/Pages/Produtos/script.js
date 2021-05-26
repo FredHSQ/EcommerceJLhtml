@@ -43,14 +43,14 @@ xhr.onreadystatechange = () => {
                 return `<section class="product-product">
                         <img src="${element.background_image}" alt="Produto: Console Nintendo Switch">
                         <hr>
-                        <h6>${element.name}</h6>
+                        <h6>${element.name.replace("'","")}</h6>
                         <div class="products-price">
                             <p> R$ ${element.suggestions_count},99 </p>
                         </div>
                         <p class="product-view" onclick="openModal(${element.id})" data-toggle="modal" data-target=".bd-example-modal-lg">
                             Ver detalhes
                         </p>
-                        <input type="button" class="add-cart" value="Adicionar ao Carrinho" onclick="adicionarPC(${element.id},'${element.name}','${element.background_image}',${element.suggestions_count},'${element.released}')">
+                        <input type="button" class="add-cart" value="Adicionar ao Carrinho" onclick="adicionarPC(${element.id},'${element.name.replace("'","")}','${element.background_image}',${element.suggestions_count},'${element.released}')">
                         <p id="${element.id}" style="visibility:hidden;margin-bottom:-8px;color:green;text-decoration:none;">Adicionado com sucesso!!!</p>
                        
                     </section>
